@@ -1,0 +1,485 @@
+VERSION ""
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Controller Vector__XXX
+
+BO_ 2364538880 ERC1: 8 Controller
+ SG_ RETARDER_TORQUE : 8|8@1+ (1,-125) [-125|0] "%" Vector__XXX
+
+BO_ 2565865739 EBC1: 8 Controller
+ SG_ BRAKE_PEDAL_POS : 8|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 2364539392 EEC2: 8 Controller
+ SG_ ACCEL_PEDAL_POS : 8|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ ENGINE_LOAD_PCT : 16|8@1+ (1,0) [0|125] "%" Vector__XXX
+
+BO_ 2364539904 EEC1: 8 Controller
+ SG_ ENGINE_TORQUE_MODE : 0|4@1+ (1,0) [0|15] "state" Vector__XXX
+ SG_ DRIVER_DEMAND_TORQUE : 8|8@1+ (1,-125) [-125|125] "%" Vector__XXX
+ SG_ ACTUAL_ENGINE_TORQUE : 16|8@1+ (1,-125) [-125|125] "%" Vector__XXX
+ SG_ ENGINE_SPEED : 24|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+ SG_ ENGINE_DEMAND_TORQUE : 56|8@1+ (1,-125) [-125|125] "%" Vector__XXX
+
+BO_ 2364540163 ETC2: 8 Controller
+ SG_ TRANS_GEAR : 24|8@1+ (1,-125) [-125|125] "gear" Vector__XXX
+
+BO_ 2364541184 VDS: 8 Controller
+ SG_ STEERING_ANGLE : 0|16@1+ (0.000976562,-31.374) [-31.374|31.374] "rad" Vector__XXX
+ SG_ YAW_RATE : 24|16@1+ (0.00012207,-3.92) [-3.92|3.92] "rad/s" Vector__XXX
+ SG_ LATERAL_ACCEL : 40|16@1+ (0.000488281,-15.687) [-15.687|15.687] "m/s2" Vector__XXX
+ SG_ LONG_ACCEL : 56|8@1+ (0.1,-12.5) [-12.5|12.5] "m/s2" Vector__XXX
+
+BO_ 2565874432 AT1_SCR_DOSING: 8 Controller
+ SG_ SCR_DOSING_RATE : 0|16@1+ (0.3,0) [0|19276.5] "g/h" Vector__XXX
+
+BO_ 2566763264 DPF_TEMP1: 8 Controller
+ SG_ DPF_INLET_TEMP : 0|16@1+ (0.03125,-273) [-273|1735] "degC" Vector__XXX
+ SG_ DPF_OUTLET_TEMP : 16|16@1+ (0.03125,-273) [-273|1735] "degC" Vector__XXX
+
+BO_ 2566804992 AT1_SCR_TANK: 8 Controller
+ SG_ SCR_TANK_LEVEL : 0|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ SCR_TANK_TEMP : 8|8@1+ (1,-40) [-40|210] "degC" Vector__XXX
+
+BO_ 2566825472 TURBO1: 8 Controller
+ SG_ TURBO_BOOST_PRESS : 0|16@1+ (0.125,0) [0|8031.88] "kPa" Vector__XXX
+ SG_ TURBO_SPEED : 16|16@1+ (1,0) [0|65535] "rpm" Vector__XXX
+
+BO_ 2566831360 FAN_DRIVE: 8 Controller
+ SG_ FAN_DRIVE_PCT : 0|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ FAN_SPEED : 16|16@1+ (0.125,0) [0|8031.88] "rpm" Vector__XXX
+
+BO_ 2566841856 TIME_DATE: 8 Controller
+ SG_ SECONDS : 0|8@1+ (0.25,0) [0|59.75] "s" Vector__XXX
+ SG_ MINUTES : 8|8@1+ (1,0) [0|59] "min" Vector__XXX
+ SG_ HOURS : 16|8@1+ (1,0) [0|23] "hr" Vector__XXX
+ SG_ MONTH : 24|8@1+ (1,0) [1|12] "month" Vector__XXX
+ SG_ DAY : 32|8@1+ (0.25,0) [0.25|31.75] "day" Vector__XXX
+ SG_ YEAR : 40|8@1+ (1,1985) [1985|2235] "yr" Vector__XXX
+
+BO_ 2566843904 ENGINE_TEMP1: 8 Controller
+ SG_ COOLANT_TEMP : 0|8@1+ (1,-40) [-40|210] "degC" Vector__XXX
+ SG_ ENGINE_OIL_TEMP : 8|16@1+ (0.03125,-273) [-273|1735] "degC" Vector__XXX
+
+BO_ 2566844160 ENGINE_FLUIDS1: 8 Controller
+ SG_ ENGINE_OIL_LEVEL : 0|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ ENGINE_OIL_PRESSURE : 24|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+
+BO_ 2566844672 CCVS1: 8 Controller
+ SG_ VEHICLE_SPEED : 8|16@1+ (0.00390625,0) [0|250.996] "km/h" Vector__XXX
+
+BO_ 2566844928 LFE: 8 Controller
+ SG_ ENGINE_FUEL_RATE : 0|16@1+ (0.05,0) [0|3212.75] "L/h" Vector__XXX
+ SG_ ENGINE_INST_FUEL_ECON : 16|16@1+ (0.00195312,0) [0|125.5] "km/L" Vector__XXX
+ SG_ ENGINE_AVG_FUEL_ECON : 32|16@1+ (0.00195312,0) [0|125.5] "km/L" Vector__XXX
+
+BO_ 2566845696 AMBIENT_COND: 8 Controller
+ SG_ BARO_PRESSURE : 0|8@1+ (0.5,0) [0|125] "kPa" Vector__XXX
+ SG_ CAB_TEMP : 8|16@1+ (0.03125,-273) [-273|1735] "degC" Vector__XXX
+ SG_ AMBIENT_TEMP : 24|16@1+ (0.03125,-273) [-273|1735] "degC" Vector__XXX
+ SG_ AIR_INLET_TEMP : 40|8@1+ (1,-40) [-40|210] "degC" Vector__XXX
+ SG_ ROAD_SURFACE_TEMP : 48|16@1+ (0.03125,-273) [-273|1735] "degC" Vector__XXX
+
+BO_ 2566845952 ENGINE_FLUIDS2: 8 Controller
+ SG_ INTAKE_MANIFOLD_PRESSURE : 8|8@1+ (2,0) [0|500] "kPa" Vector__XXX
+
+BO_ 2566846208 BATTERY_STATUS: 8 Controller
+ SG_ ALTERNATOR_CURRENT : 0|8@1+ (1,-125) [-125|125] "A" Vector__XXX
+ SG_ BATTERY_VOLTAGE : 16|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+ SG_ BATTERY_POTENTIAL : 32|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+
+BO_ 2566846467 TRANS_FLUIDS1: 8 Controller
+ SG_ TRANS_OIL_PRESSURE : 24|8@1+ (16,0) [0|4000] "kPa" Vector__XXX
+ SG_ TRANS_OIL_TEMP : 32|16@1+ (0.03125,-273) [-273|1735] "degC" Vector__XXX
+
+BO_ 2566846987 BRAKE_AIR_PRESS: 8 Controller
+ SG_ BRAKE_APP_PRESSURE : 0|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+
+BO_ 2566847488 DASH_DISPLAY: 8 Controller
+ SG_ WASHER_FLUID_LEVEL : 0|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ FUEL_LEVEL : 8|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 2566848256 WATER_IN_FUEL: 8 Controller
+ SG_ WATER_IN_FUEL_FLAG : 0|2@1+ (1,0) [0|3] "state" Vector__XXX
+
+CM_ "J1939 CAN Database generated by J1939 Intelligent Waveform & Signal Verification Hub";
+CM_ "Creators: Vishal Meyyappan R (3rd Year ECE - ACT) & Srikar (4th year ECE), CIT Chennai & STUST";
+CM_ "Configured CAN Bitrate: 500 kbps | Timing Profile: SAE STANDARDS COMPLIANT MODE";
+CM_ BO_ 2364538880 "Electronic Retarder Controller 1 (PGN 61440 / 0xF000) - Transmit Period: 50 ms";
+CM_ BO_ 2565865739 "Electronic Brake Controller 1 (PGN 61441 / 0xF001) - Transmit Period: 100 ms";
+CM_ BO_ 2364539392 "Electronic Engine Controller 2 (PGN 61442 / 0xF002) - Transmit Period: 50 ms";
+CM_ BO_ 2364539904 "Electronic Engine Controller 1 (PGN 61444 / 0xF004) - Transmit Period: 20 ms";
+CM_ BO_ 2364540163 "Electronic Transmission Controller 2 (PGN 61445 / 0xF005) - Transmit Period: 50 ms";
+CM_ BO_ 2364541184 "Vehicle Dynamic Stability (PGN 61449 / 0xF009) - Transmit Period: 50 ms";
+CM_ BO_ 2565874432 "Aftertreatment 1 SCR Dosing Control (PGN 61475 / 0xF023) - Transmit Period: 100 ms";
+CM_ BO_ 2566763264 "Aftertreatment 1 DPF Temperatures (PGN 64947 / 0xFDB3) - Transmit Period: 1000 ms";
+CM_ BO_ 2566804992 "Aftertreatment 1 SCR Tank Info (PGN 65110 / 0xFE56) - Transmit Period: 1000 ms";
+CM_ BO_ 2566825472 "Turbocharger 1 Status (PGN 65190 / 0xFEA6) - Transmit Period: 500 ms";
+CM_ BO_ 2566831360 "Fan Drive Status & Speed (PGN 65213 / 0xFEBD) - Transmit Period: 1000 ms";
+CM_ BO_ 2566841856 "Time / Date (PGN 65254 / 0xFEE6) - Transmit Period: 1000 ms";
+CM_ BO_ 2566843904 "Engine Temperature 1 (Coolant / Oil Temp) (PGN 65262 / 0xFEEE) - Transmit Period: 1000 ms";
+CM_ BO_ 2566844160 "Engine Fluids 1 (Oil / Fuel / Coolant Level) (PGN 65263 / 0xFEEF) - Transmit Period: 500 ms";
+CM_ BO_ 2566844672 "Cruise Control/Vehicle Speed 1 (PGN 65265 / 0xFEF1) - Transmit Period: 100 ms";
+CM_ BO_ 2566844928 "Fuel Economy Liquid (PGN 65266 / 0xFEF2) - Transmit Period: 100 ms";
+CM_ BO_ 2566845696 "Ambient Conditions (Barometric / Ambient Temp) (PGN 65269 / 0xFEF5) - Transmit Period: 1000 ms";
+CM_ BO_ 2566845952 "Engine Fluids 2 (Intake / Air / Boost) (PGN 65270 / 0xFEF6) - Transmit Period: 500 ms";
+CM_ BO_ 2566846208 "Electrical Potential (Voltage / Current) (PGN 65271 / 0xFEF7) - Transmit Period: 1000 ms";
+CM_ BO_ 2566846467 "Transmission Fluids 1 (Oil Pressure / Temp) (PGN 65272 / 0xFEF8) - Transmit Period: 1000 ms";
+CM_ BO_ 2566846987 "Service Brake Air Pressure (PGN 65274 / 0xFEFA) - Transmit Period: 1000 ms";
+CM_ BO_ 2566847488 "Dash Display 1 (Fuel / Washer Level) (PGN 65276 / 0xFEFC) - Transmit Period: 1000 ms";
+CM_ BO_ 2566848256 "Water In Fuel Indicator (PGN 65279 / 0xFEFF) - Transmit Period: 1000 ms";
+CM_ SG_ 2364538880 RETARDER_TORQUE "Actual Retarder Percent Torque (SPN 520) | Configured: Constant [-125.0..0.0 %]";
+CM_ SG_ 2565865739 BRAKE_PEDAL_POS "Brake Pedal Position (SPN 521) | Configured: Constant [0.0..100.0 %]";
+CM_ SG_ 2364539392 ACCEL_PEDAL_POS "Accelerator Pedal Position 1 (SPN 91) | Configured: Constant [0.0..100.0 %]";
+CM_ SG_ 2364539392 ENGINE_LOAD_PCT "Engine Percent Load At Current Speed (SPN 92) | Configured: Constant [0.0..125.0 %]";
+CM_ SG_ 2364539904 ENGINE_TORQUE_MODE "Engine Torque Mode (SPN 899) | Configured: Constant [0.0..15.0 state]";
+CM_ SG_ 2364539904 DRIVER_DEMAND_TORQUE "Driver Demand Engine Torque (SPN 512) | Configured: Constant [-125.0..125.0 %]";
+CM_ SG_ 2364539904 ACTUAL_ENGINE_TORQUE "Actual Engine Percent Torque (SPN 513) | Configured: Constant [-125.0..125.0 %]";
+CM_ SG_ 2364539904 ENGINE_SPEED "Engine Speed (SPN 190) | Configured: Constant [0.0..8031.875 rpm]";
+CM_ SG_ 2364539904 ENGINE_DEMAND_TORQUE "Engine Demand Percent Torque (SPN 2432) | Configured: Constant [-125.0..125.0 %]";
+CM_ SG_ 2364540163 TRANS_GEAR "Transmission Current Gear (SPN 523) | Configured: Constant [-125.0..125.0 gear]";
+CM_ SG_ 2364541184 STEERING_ANGLE "Steering Wheel Angle (SPN 1807) | Configured: Constant [-31.374..31.374 rad]";
+CM_ SG_ 2364541184 YAW_RATE "Yaw Rate (SPN 1808) | Configured: Constant [-3.92..3.92 rad/s]";
+CM_ SG_ 2364541184 LATERAL_ACCEL "Lateral Acceleration (SPN 1809) | Configured: Constant [-15.687..15.687 m/s2]";
+CM_ SG_ 2364541184 LONG_ACCEL "Longitudinal Acceleration (SPN 1810) | Configured: Constant [-12.5..12.5 m/s2]";
+CM_ SG_ 2565874432 SCR_DOSING_RATE "SCR Actual Dosing Reagent Quantity (SPN 4331) | Configured: Constant [0.0..19276.5 g/h]";
+CM_ SG_ 2566763264 DPF_INLET_TEMP "DPF Inlet Gas Temperature (SPN 3250) | Configured: Constant [-273.0..1735.0 degC]";
+CM_ SG_ 2566763264 DPF_OUTLET_TEMP "DPF Outlet Gas Temperature (SPN 3246) | Configured: Constant [-273.0..1735.0 degC]";
+CM_ SG_ 2566804992 SCR_TANK_LEVEL "SCR Catalyst Tank Level (SPN 1761) | Configured: Constant [0.0..100.0 %]";
+CM_ SG_ 2566804992 SCR_TANK_TEMP "SCR Catalyst Tank Temperature (SPN 3031) | Configured: Constant [-40.0..210.0 degC]";
+CM_ SG_ 2566825472 TURBO_BOOST_PRESS "Turbocharger 1 Boost Pressure (SPN 1127) | Configured: Constant [0.0..8031.875 kPa]";
+CM_ SG_ 2566825472 TURBO_SPEED "Turbocharger Speed (SPN 103) | Configured: Constant [0.0..65535.0 rpm]";
+CM_ SG_ 2566831360 FAN_DRIVE_PCT "Estimated Fan Speed Percent (SPN 1639) | Configured: Constant [0.0..100.0 %]";
+CM_ SG_ 2566831360 FAN_SPEED "Fan Speed (SPN 975) | Configured: Constant [0.0..8031.875 rpm]";
+CM_ SG_ 2566841856 SECONDS "Seconds (SPN 959) | Configured: Constant [0.0..59.75 s]";
+CM_ SG_ 2566841856 MINUTES "Minutes (SPN 960) | Configured: Constant [0.0..59.0 min]";
+CM_ SG_ 2566841856 HOURS "Hours (SPN 961) | Configured: Constant [0.0..23.0 hr]";
+CM_ SG_ 2566841856 MONTH "Month (SPN 963) | Configured: Constant [1.0..12.0 month]";
+CM_ SG_ 2566841856 DAY "Day (SPN 962) | Configured: Constant [0.25..31.75 day]";
+CM_ SG_ 2566841856 YEAR "Year (SPN 964) | Configured: Constant [1985.0..2235.0 yr]";
+CM_ SG_ 2566843904 COOLANT_TEMP "Engine Coolant Temperature (SPN 110) | Configured: Constant [-40.0..210.0 degC]";
+CM_ SG_ 2566843904 ENGINE_OIL_TEMP "Engine Oil Temperature 1 (SPN 175) | Configured: Constant [-273.0..1735.0 degC]";
+CM_ SG_ 2566844160 ENGINE_OIL_LEVEL "Engine Oil Level (SPN 98) | Configured: Constant [0.0..100.0 %]";
+CM_ SG_ 2566844160 ENGINE_OIL_PRESSURE "Engine Oil Pressure (SPN 100) | Configured: Constant [0.0..1000.0 kPa]";
+CM_ SG_ 2566844672 VEHICLE_SPEED "Wheel-Based Vehicle Speed (SPN 84) | Configured: Constant [0.0..250.996 km/h]";
+CM_ SG_ 2566844928 ENGINE_FUEL_RATE "Engine Fuel Rate (SPN 183) | Configured: Constant [0.0..3212.75 L/h]";
+CM_ SG_ 2566844928 ENGINE_INST_FUEL_ECON "Engine Instantaneous Fuel Economy (SPN 184) | Configured: Constant [0.0..125.5 km/L]";
+CM_ SG_ 2566844928 ENGINE_AVG_FUEL_ECON "Engine Average Fuel Economy (SPN 185) | Configured: Constant [0.0..125.5 km/L]";
+CM_ SG_ 2566845696 BARO_PRESSURE "Barometric Pressure (SPN 108) | Configured: Constant [0.0..125.0 kPa]";
+CM_ SG_ 2566845696 CAB_TEMP "Cab Interior Temperature (SPN 170) | Configured: Constant [-273.0..1735.0 degC]";
+CM_ SG_ 2566845696 AMBIENT_TEMP "Ambient Air Temperature (SPN 171) | Configured: Constant [-273.0..1735.0 degC]";
+CM_ SG_ 2566845696 AIR_INLET_TEMP "Engine Air Inlet Temperature (SPN 172) | Configured: Constant [-40.0..210.0 degC]";
+CM_ SG_ 2566845696 ROAD_SURFACE_TEMP "Road Surface Temperature (SPN 79) | Configured: Constant [-273.0..1735.0 degC]";
+CM_ SG_ 2566845952 INTAKE_MANIFOLD_PRESSURE "Engine Intake Manifold #1 Pressure (SPN 102) | Configured: Constant [0.0..500.0 kPa]";
+CM_ SG_ 2566846208 ALTERNATOR_CURRENT "Alternator Current (SPN 115) | Configured: Constant [-125.0..125.0 A]";
+CM_ SG_ 2566846208 BATTERY_VOLTAGE "Battery Potential (Voltage) (SPN 167) | Configured: Constant [0.0..3212.75 V]";
+CM_ SG_ 2566846208 BATTERY_POTENTIAL "Battery Potential / Power Input 1 (SPN 168) | Configured: Constant [0.0..3212.75 V]";
+CM_ SG_ 2566846467 TRANS_OIL_PRESSURE "Transmission Oil Pressure (SPN 127) | Configured: Constant [0.0..4000.0 kPa]";
+CM_ SG_ 2566846467 TRANS_OIL_TEMP "Transmission Oil Temperature (SPN 177) | Configured: Constant [-273.0..1735.0 degC]";
+CM_ SG_ 2566846987 BRAKE_APP_PRESSURE "Brake Application Pressure (SPN 116) | Configured: Constant [0.0..1000.0 kPa]";
+CM_ SG_ 2566847488 WASHER_FLUID_LEVEL "Washer Fluid Level (SPN 80) | Configured: Constant [0.0..100.0 %]";
+CM_ SG_ 2566847488 FUEL_LEVEL "Fuel Level 1 (SPN 96) | Configured: Constant [0.0..100.0 %]";
+CM_ SG_ 2566848256 WATER_IN_FUEL_FLAG "Water In Fuel Indicator (SPN 97) | Configured: Constant [0.0..3.0 state]";
+
+BA_DEF_ "BusType" STRING ;
+BA_DEF_ "ProtocolType" STRING ;
+BA_DEF_ BO_ "VFrameFormat" ENUM "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_ "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BO_ "GenMsgSendType" ENUM "cyclic","spontaneous","cyclicAndSpontaneous";
+BA_DEF_ BO_ "PGN" INT 0 262143;
+BA_DEF_ SG_ "SPN" INT 0 524287;
+BA_DEF_ SG_ "WaveformPattern" STRING ;
+BA_DEF_ SG_ "WaveformParam" FLOAT 0 1000000;
+
+BA_DEF_DEF_ "BusType" "CAN";
+BA_DEF_DEF_ "ProtocolType" "J1939";
+BA_DEF_DEF_ "VFrameFormat" "J1939PG";
+BA_DEF_DEF_ "GenMsgCycleTime" 100;
+BA_DEF_DEF_ "GenMsgSendType" "cyclic";
+BA_DEF_DEF_ "PGN" 0;
+BA_DEF_DEF_ "SPN" 0;
+BA_DEF_DEF_ "WaveformPattern" "Constant";
+BA_DEF_DEF_ "WaveformParam" 10.0;
+
+BA_ "BusType" "CAN";
+BA_ "ProtocolType" "J1939";
+
+BA_ "VFrameFormat" BO_ 2364538880 3;
+BA_ "GenMsgCycleTime" BO_ 2364538880 50;
+BA_ "GenMsgSendType" BO_ 2364538880 0;
+BA_ "PGN" BO_ 2364538880 61440;
+BA_ "VFrameFormat" BO_ 2565865739 3;
+BA_ "GenMsgCycleTime" BO_ 2565865739 100;
+BA_ "GenMsgSendType" BO_ 2565865739 0;
+BA_ "PGN" BO_ 2565865739 61441;
+BA_ "VFrameFormat" BO_ 2364539392 3;
+BA_ "GenMsgCycleTime" BO_ 2364539392 50;
+BA_ "GenMsgSendType" BO_ 2364539392 0;
+BA_ "PGN" BO_ 2364539392 61442;
+BA_ "VFrameFormat" BO_ 2364539904 3;
+BA_ "GenMsgCycleTime" BO_ 2364539904 20;
+BA_ "GenMsgSendType" BO_ 2364539904 0;
+BA_ "PGN" BO_ 2364539904 61444;
+BA_ "VFrameFormat" BO_ 2364540163 3;
+BA_ "GenMsgCycleTime" BO_ 2364540163 50;
+BA_ "GenMsgSendType" BO_ 2364540163 0;
+BA_ "PGN" BO_ 2364540163 61445;
+BA_ "VFrameFormat" BO_ 2364541184 3;
+BA_ "GenMsgCycleTime" BO_ 2364541184 50;
+BA_ "GenMsgSendType" BO_ 2364541184 0;
+BA_ "PGN" BO_ 2364541184 61449;
+BA_ "VFrameFormat" BO_ 2565874432 3;
+BA_ "GenMsgCycleTime" BO_ 2565874432 100;
+BA_ "GenMsgSendType" BO_ 2565874432 0;
+BA_ "PGN" BO_ 2565874432 61475;
+BA_ "VFrameFormat" BO_ 2566763264 3;
+BA_ "GenMsgCycleTime" BO_ 2566763264 1000;
+BA_ "GenMsgSendType" BO_ 2566763264 0;
+BA_ "PGN" BO_ 2566763264 64947;
+BA_ "VFrameFormat" BO_ 2566804992 3;
+BA_ "GenMsgCycleTime" BO_ 2566804992 1000;
+BA_ "GenMsgSendType" BO_ 2566804992 0;
+BA_ "PGN" BO_ 2566804992 65110;
+BA_ "VFrameFormat" BO_ 2566825472 3;
+BA_ "GenMsgCycleTime" BO_ 2566825472 500;
+BA_ "GenMsgSendType" BO_ 2566825472 0;
+BA_ "PGN" BO_ 2566825472 65190;
+BA_ "VFrameFormat" BO_ 2566831360 3;
+BA_ "GenMsgCycleTime" BO_ 2566831360 1000;
+BA_ "GenMsgSendType" BO_ 2566831360 0;
+BA_ "PGN" BO_ 2566831360 65213;
+BA_ "VFrameFormat" BO_ 2566841856 3;
+BA_ "GenMsgCycleTime" BO_ 2566841856 1000;
+BA_ "GenMsgSendType" BO_ 2566841856 0;
+BA_ "PGN" BO_ 2566841856 65254;
+BA_ "VFrameFormat" BO_ 2566843904 3;
+BA_ "GenMsgCycleTime" BO_ 2566843904 1000;
+BA_ "GenMsgSendType" BO_ 2566843904 0;
+BA_ "PGN" BO_ 2566843904 65262;
+BA_ "VFrameFormat" BO_ 2566844160 3;
+BA_ "GenMsgCycleTime" BO_ 2566844160 500;
+BA_ "GenMsgSendType" BO_ 2566844160 0;
+BA_ "PGN" BO_ 2566844160 65263;
+BA_ "VFrameFormat" BO_ 2566844672 3;
+BA_ "GenMsgCycleTime" BO_ 2566844672 100;
+BA_ "GenMsgSendType" BO_ 2566844672 0;
+BA_ "PGN" BO_ 2566844672 65265;
+BA_ "VFrameFormat" BO_ 2566844928 3;
+BA_ "GenMsgCycleTime" BO_ 2566844928 100;
+BA_ "GenMsgSendType" BO_ 2566844928 0;
+BA_ "PGN" BO_ 2566844928 65266;
+BA_ "VFrameFormat" BO_ 2566845696 3;
+BA_ "GenMsgCycleTime" BO_ 2566845696 1000;
+BA_ "GenMsgSendType" BO_ 2566845696 0;
+BA_ "PGN" BO_ 2566845696 65269;
+BA_ "VFrameFormat" BO_ 2566845952 3;
+BA_ "GenMsgCycleTime" BO_ 2566845952 500;
+BA_ "GenMsgSendType" BO_ 2566845952 0;
+BA_ "PGN" BO_ 2566845952 65270;
+BA_ "VFrameFormat" BO_ 2566846208 3;
+BA_ "GenMsgCycleTime" BO_ 2566846208 1000;
+BA_ "GenMsgSendType" BO_ 2566846208 0;
+BA_ "PGN" BO_ 2566846208 65271;
+BA_ "VFrameFormat" BO_ 2566846467 3;
+BA_ "GenMsgCycleTime" BO_ 2566846467 1000;
+BA_ "GenMsgSendType" BO_ 2566846467 0;
+BA_ "PGN" BO_ 2566846467 65272;
+BA_ "VFrameFormat" BO_ 2566846987 3;
+BA_ "GenMsgCycleTime" BO_ 2566846987 1000;
+BA_ "GenMsgSendType" BO_ 2566846987 0;
+BA_ "PGN" BO_ 2566846987 65274;
+BA_ "VFrameFormat" BO_ 2566847488 3;
+BA_ "GenMsgCycleTime" BO_ 2566847488 1000;
+BA_ "GenMsgSendType" BO_ 2566847488 0;
+BA_ "PGN" BO_ 2566847488 65276;
+BA_ "VFrameFormat" BO_ 2566848256 3;
+BA_ "GenMsgCycleTime" BO_ 2566848256 1000;
+BA_ "GenMsgSendType" BO_ 2566848256 0;
+BA_ "PGN" BO_ 2566848256 65279;
+
+BA_ "SPN" SG_ 2364538880 RETARDER_TORQUE 520;
+BA_ "WaveformPattern" SG_ 2364538880 RETARDER_TORQUE "Constant";
+BA_ "WaveformParam" SG_ 2364538880 RETARDER_TORQUE 0.00;
+BA_ "SPN" SG_ 2565865739 BRAKE_PEDAL_POS 521;
+BA_ "WaveformPattern" SG_ 2565865739 BRAKE_PEDAL_POS "Constant";
+BA_ "WaveformParam" SG_ 2565865739 BRAKE_PEDAL_POS 0.00;
+BA_ "SPN" SG_ 2364539392 ACCEL_PEDAL_POS 91;
+BA_ "WaveformPattern" SG_ 2364539392 ACCEL_PEDAL_POS "Constant";
+BA_ "WaveformParam" SG_ 2364539392 ACCEL_PEDAL_POS 0.00;
+BA_ "SPN" SG_ 2364539392 ENGINE_LOAD_PCT 92;
+BA_ "WaveformPattern" SG_ 2364539392 ENGINE_LOAD_PCT "Constant";
+BA_ "WaveformParam" SG_ 2364539392 ENGINE_LOAD_PCT 0.00;
+BA_ "SPN" SG_ 2364539904 ENGINE_TORQUE_MODE 899;
+BA_ "WaveformPattern" SG_ 2364539904 ENGINE_TORQUE_MODE "Constant";
+BA_ "WaveformParam" SG_ 2364539904 ENGINE_TORQUE_MODE 0.00;
+BA_ "SPN" SG_ 2364539904 DRIVER_DEMAND_TORQUE 512;
+BA_ "WaveformPattern" SG_ 2364539904 DRIVER_DEMAND_TORQUE "Constant";
+BA_ "WaveformParam" SG_ 2364539904 DRIVER_DEMAND_TORQUE 0.00;
+BA_ "SPN" SG_ 2364539904 ACTUAL_ENGINE_TORQUE 513;
+BA_ "WaveformPattern" SG_ 2364539904 ACTUAL_ENGINE_TORQUE "Constant";
+BA_ "WaveformParam" SG_ 2364539904 ACTUAL_ENGINE_TORQUE 0.00;
+BA_ "SPN" SG_ 2364539904 ENGINE_SPEED 190;
+BA_ "WaveformPattern" SG_ 2364539904 ENGINE_SPEED "Constant";
+BA_ "WaveformParam" SG_ 2364539904 ENGINE_SPEED 0.00;
+BA_ "SPN" SG_ 2364539904 ENGINE_DEMAND_TORQUE 2432;
+BA_ "WaveformPattern" SG_ 2364539904 ENGINE_DEMAND_TORQUE "Constant";
+BA_ "WaveformParam" SG_ 2364539904 ENGINE_DEMAND_TORQUE 0.00;
+BA_ "SPN" SG_ 2364540163 TRANS_GEAR 523;
+BA_ "WaveformPattern" SG_ 2364540163 TRANS_GEAR "Constant";
+BA_ "WaveformParam" SG_ 2364540163 TRANS_GEAR 0.00;
+BA_ "SPN" SG_ 2364541184 STEERING_ANGLE 1807;
+BA_ "WaveformPattern" SG_ 2364541184 STEERING_ANGLE "Constant";
+BA_ "WaveformParam" SG_ 2364541184 STEERING_ANGLE 0.00;
+BA_ "SPN" SG_ 2364541184 YAW_RATE 1808;
+BA_ "WaveformPattern" SG_ 2364541184 YAW_RATE "Constant";
+BA_ "WaveformParam" SG_ 2364541184 YAW_RATE 0.00;
+BA_ "SPN" SG_ 2364541184 LATERAL_ACCEL 1809;
+BA_ "WaveformPattern" SG_ 2364541184 LATERAL_ACCEL "Constant";
+BA_ "WaveformParam" SG_ 2364541184 LATERAL_ACCEL 0.00;
+BA_ "SPN" SG_ 2364541184 LONG_ACCEL 1810;
+BA_ "WaveformPattern" SG_ 2364541184 LONG_ACCEL "Constant";
+BA_ "WaveformParam" SG_ 2364541184 LONG_ACCEL 0.00;
+BA_ "SPN" SG_ 2565874432 SCR_DOSING_RATE 4331;
+BA_ "WaveformPattern" SG_ 2565874432 SCR_DOSING_RATE "Constant";
+BA_ "WaveformParam" SG_ 2565874432 SCR_DOSING_RATE 0.00;
+BA_ "SPN" SG_ 2566763264 DPF_INLET_TEMP 3250;
+BA_ "WaveformPattern" SG_ 2566763264 DPF_INLET_TEMP "Constant";
+BA_ "WaveformParam" SG_ 2566763264 DPF_INLET_TEMP 0.00;
+BA_ "SPN" SG_ 2566763264 DPF_OUTLET_TEMP 3246;
+BA_ "WaveformPattern" SG_ 2566763264 DPF_OUTLET_TEMP "Constant";
+BA_ "WaveformParam" SG_ 2566763264 DPF_OUTLET_TEMP 0.00;
+BA_ "SPN" SG_ 2566804992 SCR_TANK_LEVEL 1761;
+BA_ "WaveformPattern" SG_ 2566804992 SCR_TANK_LEVEL "Constant";
+BA_ "WaveformParam" SG_ 2566804992 SCR_TANK_LEVEL 0.00;
+BA_ "SPN" SG_ 2566804992 SCR_TANK_TEMP 3031;
+BA_ "WaveformPattern" SG_ 2566804992 SCR_TANK_TEMP "Constant";
+BA_ "WaveformParam" SG_ 2566804992 SCR_TANK_TEMP 0.00;
+BA_ "SPN" SG_ 2566825472 TURBO_BOOST_PRESS 1127;
+BA_ "WaveformPattern" SG_ 2566825472 TURBO_BOOST_PRESS "Constant";
+BA_ "WaveformParam" SG_ 2566825472 TURBO_BOOST_PRESS 0.00;
+BA_ "SPN" SG_ 2566825472 TURBO_SPEED 103;
+BA_ "WaveformPattern" SG_ 2566825472 TURBO_SPEED "Constant";
+BA_ "WaveformParam" SG_ 2566825472 TURBO_SPEED 0.00;
+BA_ "SPN" SG_ 2566831360 FAN_DRIVE_PCT 1639;
+BA_ "WaveformPattern" SG_ 2566831360 FAN_DRIVE_PCT "Constant";
+BA_ "WaveformParam" SG_ 2566831360 FAN_DRIVE_PCT 0.00;
+BA_ "SPN" SG_ 2566831360 FAN_SPEED 975;
+BA_ "WaveformPattern" SG_ 2566831360 FAN_SPEED "Constant";
+BA_ "WaveformParam" SG_ 2566831360 FAN_SPEED 0.00;
+BA_ "SPN" SG_ 2566841856 SECONDS 959;
+BA_ "WaveformPattern" SG_ 2566841856 SECONDS "Constant";
+BA_ "WaveformParam" SG_ 2566841856 SECONDS 0.00;
+BA_ "SPN" SG_ 2566841856 MINUTES 960;
+BA_ "WaveformPattern" SG_ 2566841856 MINUTES "Constant";
+BA_ "WaveformParam" SG_ 2566841856 MINUTES 0.00;
+BA_ "SPN" SG_ 2566841856 HOURS 961;
+BA_ "WaveformPattern" SG_ 2566841856 HOURS "Constant";
+BA_ "WaveformParam" SG_ 2566841856 HOURS 0.00;
+BA_ "SPN" SG_ 2566841856 MONTH 963;
+BA_ "WaveformPattern" SG_ 2566841856 MONTH "Constant";
+BA_ "WaveformParam" SG_ 2566841856 MONTH 0.00;
+BA_ "SPN" SG_ 2566841856 DAY 962;
+BA_ "WaveformPattern" SG_ 2566841856 DAY "Constant";
+BA_ "WaveformParam" SG_ 2566841856 DAY 0.00;
+BA_ "SPN" SG_ 2566841856 YEAR 964;
+BA_ "WaveformPattern" SG_ 2566841856 YEAR "Constant";
+BA_ "WaveformParam" SG_ 2566841856 YEAR 0.00;
+BA_ "SPN" SG_ 2566843904 COOLANT_TEMP 110;
+BA_ "WaveformPattern" SG_ 2566843904 COOLANT_TEMP "Constant";
+BA_ "WaveformParam" SG_ 2566843904 COOLANT_TEMP 0.00;
+BA_ "SPN" SG_ 2566843904 ENGINE_OIL_TEMP 175;
+BA_ "WaveformPattern" SG_ 2566843904 ENGINE_OIL_TEMP "Constant";
+BA_ "WaveformParam" SG_ 2566843904 ENGINE_OIL_TEMP 0.00;
+BA_ "SPN" SG_ 2566844160 ENGINE_OIL_LEVEL 98;
+BA_ "WaveformPattern" SG_ 2566844160 ENGINE_OIL_LEVEL "Constant";
+BA_ "WaveformParam" SG_ 2566844160 ENGINE_OIL_LEVEL 0.00;
+BA_ "SPN" SG_ 2566844160 ENGINE_OIL_PRESSURE 100;
+BA_ "WaveformPattern" SG_ 2566844160 ENGINE_OIL_PRESSURE "Constant";
+BA_ "WaveformParam" SG_ 2566844160 ENGINE_OIL_PRESSURE 0.00;
+BA_ "SPN" SG_ 2566844672 VEHICLE_SPEED 84;
+BA_ "WaveformPattern" SG_ 2566844672 VEHICLE_SPEED "Constant";
+BA_ "WaveformParam" SG_ 2566844672 VEHICLE_SPEED 0.00;
+BA_ "SPN" SG_ 2566844928 ENGINE_FUEL_RATE 183;
+BA_ "WaveformPattern" SG_ 2566844928 ENGINE_FUEL_RATE "Constant";
+BA_ "WaveformParam" SG_ 2566844928 ENGINE_FUEL_RATE 0.00;
+BA_ "SPN" SG_ 2566844928 ENGINE_INST_FUEL_ECON 184;
+BA_ "WaveformPattern" SG_ 2566844928 ENGINE_INST_FUEL_ECON "Constant";
+BA_ "WaveformParam" SG_ 2566844928 ENGINE_INST_FUEL_ECON 0.00;
+BA_ "SPN" SG_ 2566844928 ENGINE_AVG_FUEL_ECON 185;
+BA_ "WaveformPattern" SG_ 2566844928 ENGINE_AVG_FUEL_ECON "Constant";
+BA_ "WaveformParam" SG_ 2566844928 ENGINE_AVG_FUEL_ECON 0.00;
+BA_ "SPN" SG_ 2566845696 BARO_PRESSURE 108;
+BA_ "WaveformPattern" SG_ 2566845696 BARO_PRESSURE "Constant";
+BA_ "WaveformParam" SG_ 2566845696 BARO_PRESSURE 0.00;
+BA_ "SPN" SG_ 2566845696 CAB_TEMP 170;
+BA_ "WaveformPattern" SG_ 2566845696 CAB_TEMP "Constant";
+BA_ "WaveformParam" SG_ 2566845696 CAB_TEMP 0.00;
+BA_ "SPN" SG_ 2566845696 AMBIENT_TEMP 171;
+BA_ "WaveformPattern" SG_ 2566845696 AMBIENT_TEMP "Constant";
+BA_ "WaveformParam" SG_ 2566845696 AMBIENT_TEMP 0.00;
+BA_ "SPN" SG_ 2566845696 AIR_INLET_TEMP 172;
+BA_ "WaveformPattern" SG_ 2566845696 AIR_INLET_TEMP "Constant";
+BA_ "WaveformParam" SG_ 2566845696 AIR_INLET_TEMP 0.00;
+BA_ "SPN" SG_ 2566845696 ROAD_SURFACE_TEMP 79;
+BA_ "WaveformPattern" SG_ 2566845696 ROAD_SURFACE_TEMP "Constant";
+BA_ "WaveformParam" SG_ 2566845696 ROAD_SURFACE_TEMP 0.00;
+BA_ "SPN" SG_ 2566845952 INTAKE_MANIFOLD_PRESSURE 102;
+BA_ "WaveformPattern" SG_ 2566845952 INTAKE_MANIFOLD_PRESSURE "Constant";
+BA_ "WaveformParam" SG_ 2566845952 INTAKE_MANIFOLD_PRESSURE 0.00;
+BA_ "SPN" SG_ 2566846208 ALTERNATOR_CURRENT 115;
+BA_ "WaveformPattern" SG_ 2566846208 ALTERNATOR_CURRENT "Constant";
+BA_ "WaveformParam" SG_ 2566846208 ALTERNATOR_CURRENT 0.00;
+BA_ "SPN" SG_ 2566846208 BATTERY_VOLTAGE 167;
+BA_ "WaveformPattern" SG_ 2566846208 BATTERY_VOLTAGE "Constant";
+BA_ "WaveformParam" SG_ 2566846208 BATTERY_VOLTAGE 0.00;
+BA_ "SPN" SG_ 2566846208 BATTERY_POTENTIAL 168;
+BA_ "WaveformPattern" SG_ 2566846208 BATTERY_POTENTIAL "Constant";
+BA_ "WaveformParam" SG_ 2566846208 BATTERY_POTENTIAL 0.00;
+BA_ "SPN" SG_ 2566846467 TRANS_OIL_PRESSURE 127;
+BA_ "WaveformPattern" SG_ 2566846467 TRANS_OIL_PRESSURE "Constant";
+BA_ "WaveformParam" SG_ 2566846467 TRANS_OIL_PRESSURE 0.00;
+BA_ "SPN" SG_ 2566846467 TRANS_OIL_TEMP 177;
+BA_ "WaveformPattern" SG_ 2566846467 TRANS_OIL_TEMP "Constant";
+BA_ "WaveformParam" SG_ 2566846467 TRANS_OIL_TEMP 0.00;
+BA_ "SPN" SG_ 2566846987 BRAKE_APP_PRESSURE 116;
+BA_ "WaveformPattern" SG_ 2566846987 BRAKE_APP_PRESSURE "Constant";
+BA_ "WaveformParam" SG_ 2566846987 BRAKE_APP_PRESSURE 0.00;
+BA_ "SPN" SG_ 2566847488 WASHER_FLUID_LEVEL 80;
+BA_ "WaveformPattern" SG_ 2566847488 WASHER_FLUID_LEVEL "Constant";
+BA_ "WaveformParam" SG_ 2566847488 WASHER_FLUID_LEVEL 0.00;
+BA_ "SPN" SG_ 2566847488 FUEL_LEVEL 96;
+BA_ "WaveformPattern" SG_ 2566847488 FUEL_LEVEL "Constant";
+BA_ "WaveformParam" SG_ 2566847488 FUEL_LEVEL 0.00;
+BA_ "SPN" SG_ 2566848256 WATER_IN_FUEL_FLAG 97;
+BA_ "WaveformPattern" SG_ 2566848256 WATER_IN_FUEL_FLAG "Constant";
+BA_ "WaveformParam" SG_ 2566848256 WATER_IN_FUEL_FLAG 0.00;

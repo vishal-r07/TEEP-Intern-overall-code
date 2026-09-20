@@ -1,0 +1,19 @@
+{
+  "0x0CF00400": {
+    "Engine_Speed": 1500.0
+  },
+  "0x0CF00200": {
+    "Accel_Pedal_Pos": 50.0
+  },
+  "0x18F00100": {
+    "Brake_Pedal_Pos": 30.0
+  },
+  "0x18FEF100": {
+    "Vehicle_Speed": 60.0
+  },
+  "0x18FEF200": {
+    "Engine_Fuel_Rate": 100.0,
+    "Engine_Inst_Fuel_Economy": 15.0,
+    "Engine_Avg_Fuel_Economy": 12.0
+  }
+}
